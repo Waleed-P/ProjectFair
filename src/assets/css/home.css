@@ -1,0 +1,35 @@
+.testimonial-card {
+    width: 18rem;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center; /* Center text and image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rounded-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px auto; /* Center the image with auto margins */
+  }
+  
+  .user-name {
+    margin: 15px 0 10px;
+    font-weight: bold;
+  }
+  
+  .star-rating {
+    color: #ffcd3c; /* Gold color for stars */
+    margin-bottom: 10px;
+  }
+  
+  .star-rating i {
+    margin: 0 2px;
+  }
+  
+  .testimonial-description {
+    font-size: 14px;
+    color: #666;
+    padding: 0 10px;
+  }
+  
