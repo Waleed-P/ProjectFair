@@ -94,92 +94,94 @@ function Home() {
       </div>
       {/* testimony  */}
       <div className="d-flex justify-content-center align-items-center mb-5 flex-column">
-        <h1>Our Testimonials</h1>
-        <div
-          style={{ width: "100%" }}
-          className="d-flex align-items-center justify-content-evenly"
-        >
-          <Card className="testimonial-card">
-            <div className="text-center">
-              {" "}
-              {/* Centering the image and text */}
-              <img
-                alt="User"
-                className="rounded-image"
-                src="https://picsum.photos/100/100"
-              />
-            </div>
-            <CardBody>
-              <CardTitle tag="h5" className="user-name">
-                Waleed
-              </CardTitle>
-              <div className="star-rating">
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star-half-alt"></i>
+        <h1 className="text-center mb-4">Our Testimonials</h1>
+
+        {/* Bootstrap Row for Responsiveness */}
+        <div className="row w-100 justify-content-center">
+          {/* Each testimonial Card is wrapped in a column for responsiveness */}
+          <div className="col-12 col-md-4 mb-4 d-flex justify-content-center">
+            <Card className="testimonial-card w-100">
+              <div className="text-center">
+                <img
+                  alt="User"
+                  className="rounded-image"
+                  src="https://picsum.photos/100/100"
+                />
               </div>
-              <p className="testimonial-description">
-                "This product changed my life! I can't recommend it enough. The
-                quality is amazing and the customer service is top-notch."
-              </p>
-            </CardBody>
-          </Card>
-          <Card className="testimonial-card">
-            <div className="text-center">
-              {" "}
-              {/* Centering the image and text */}
-              <img
-                alt="User"
-                className="rounded-image"
-                src="https://picsum.photos/100/100"
-              />
-            </div>
-            <CardBody>
-              <CardTitle tag="h5" className="user-name">
-                Shahim
-              </CardTitle>
-              <div className="star-rating">
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star-half-alt"></i>
+              <CardBody>
+                <CardTitle tag="h5" className="user-name">
+                  Waleed
+                </CardTitle>
+                <div className="star-rating">
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star-half-alt"></i>
+                </div>
+                <p className="testimonial-description">
+                  "This product changed my life! I can't recommend it enough.
+                  The quality is amazing and the customer service is top-notch."
+                </p>
+              </CardBody>
+            </Card>
+          </div>
+
+          <div className="col-12 col-md-4 mb-4 d-flex justify-content-center">
+            <Card className="testimonial-card w-100">
+              <div className="text-center">
+                <img
+                  alt="User"
+                  className="rounded-image"
+                  src="https://picsum.photos/100/100"
+                />
               </div>
-              <p className="testimonial-description">
-                I’m so glad I decided to try this product! It exceeded all my
-                expectations with its outstanding quality.
-              </p>
-            </CardBody>
-          </Card>
-          <Card className="testimonial-card">
-            <div className="text-center">
-              {" "}
-              {/* Centering the image and text */}
-              <img
-                alt="User"
-                className="rounded-image"
-                src="https://picsum.photos/100/100"
-              />
-            </div>
-            <CardBody>
-              <CardTitle tag="h5" className="user-name">
-                Shamseer
-              </CardTitle>
-              <div className="star-rating">
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star-half-alt"></i>
+              <CardBody>
+                <CardTitle tag="h5" className="user-name">
+                  Shahim
+                </CardTitle>
+                <div className="star-rating">
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star-half-alt"></i>
+                </div>
+                <p className="testimonial-description">
+                  I’m so glad I decided to try this product! It exceeded all my
+                  expectations with its outstanding quality.
+                </p>
+              </CardBody>
+            </Card>
+          </div>
+
+          <div className="col-12 col-md-4 mb-4 d-flex justify-content-center">
+            <Card className="testimonial-card w-100">
+              <div className="text-center">
+                <img
+                  alt="User"
+                  className="rounded-image"
+                  src="https://picsum.photos/100/100"
+                />
               </div>
-              <p className="testimonial-description">
-                This product has truly transformed my daily routine! I can't
-                express how much I appreciate its quality and functionality.
-              </p>
-            </CardBody>
-          </Card>
+              <CardBody>
+                <CardTitle tag="h5" className="user-name">
+                  Shamseer
+                </CardTitle>
+                <div className="star-rating">
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star-half-alt"></i>
+                </div>
+                <p className="testimonial-description">
+                  This product has truly transformed my daily routine! I can't
+                  express how much I appreciate its quality and functionality.
+                </p>
+              </CardBody>
+            </Card>
+          </div>
         </div>
       </div>
     </>
