@@ -67,23 +67,29 @@ function Edit({ project }) {
       formData.append("website", website);
       formData.append("project_image", projectImage);
       const token = sessionStorage.getItem("token");
-      console.log(token)
+      console.log(token);
       if (token) {
         const reqHeader = {
           "Content-Type": preview ? "multipart/form-data" : "application/json",
           Authorization: `Bearer ${token}`,
         };
         //api call
-        try{
-          const result = await editProjectAPI(projectData.id,formData,reqHeader)
-          console.log(result)
-          if(result.status == 200){
+        try {
+          const result = await editProjectAPI(
+            projectData.id,
+            formData,
+            reqHeader
+          );
+          console.log(result);
+          if (result.status == 200) {
             toggleModalClose();
             setAddResponse(result);
             toast.success("Project updated successfully");
             //pass the response to view component using context api
           }
-        }catch(e){console.log(e)}
+        } catch (e) {
+          console.log(e);
+        }
       }
     }
   };
@@ -92,13 +98,17 @@ function Edit({ project }) {
       <Button className="btn" onClick={toggleModalOpen}>
         Edit
       </Button>
-
-      <Modal isOpen={modal} size="lg" toggle={toggleModalClose}>
+      <Modal
+        isOpen={modal}
+        size="lg"
+        toggle={toggleModalClose}
+        className="responsive-modal"
+      >
         <ModalHeader toggle={toggleModalClose}>Project Details</ModalHeader>
         <ModalBody>
-          <div className="d-flex">
+          <div className="row">
             {/* Left Section for Image Upload */}
-            <div className="me-3">
+            <div className="col-12 col-md-4 text-center mb-3 mb-md-0">
               <label>
                 <input
                   type="file"
@@ -112,7 +122,11 @@ function Edit({ project }) {
                   }
                 />
                 <img
-                  style={{ height: "200px", cursor: "pointer" }}
+                  style={{
+                    height: "200px",
+                    cursor: "pointer",
+                    objectFit: "cover",
+                  }}
                   className="img-fluid"
                   src={
                     preview
@@ -125,7 +139,7 @@ function Edit({ project }) {
             </div>
 
             {/* Right Section for Inputs */}
-            <div style={{ flex: 2 }}>
+            <div className="col-12 col-md-8">
               <FormGroup>
                 <Input
                   type="text"
